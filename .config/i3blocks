@@ -45,9 +45,8 @@ interval=60
 label=
 interval=60
 
-[network]
+[ssid]
 label=
-instance=wlp1s0
 interval=10
 
 [battery]
