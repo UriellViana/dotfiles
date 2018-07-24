@@ -2,19 +2,58 @@ command=$HOME/.config/i3blocks/blocks/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
-#[network]
-#label=
-#instance=enp0s3
-#interval=10
+[audio]
+label=
+interval=5
 
-#[battery]
-#label=
-#instance=0
-#interval=5
+[bandwidth]
+instance=wlp1s0;in
+label=
+interval=1
+
+[bandwidth]
+instance=wlp1s0;out
+label=
+interval=1
+
+[brightness]
+label=
+interval=5
+
+[cpu]
+label=
+interval=2
+
+[memory]
+label=
+instance=mem;free
+interval=30
+
+[packages]
+label=
+interval=300
+
+[user]
+label=
+interval=once
 
 [weather]
 instance=3470127
 interval=60
+
+[ip-address]
+label=
+interval=60
+
+[network]
+label=
+instance=wlp1s0
+interval=10
+
+[battery]
+label=
+instance=0
+interval=5
 
 [datetime]
 instance=%Y/%m/%d %H:%M:%S

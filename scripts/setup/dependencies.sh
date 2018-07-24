@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:jasonpleau/rofi -y
 sudo apt-get update
 
 # Get some of the initial dependencies
-sudo apt-get install git feh lxappearance curl rofi i3lock i3blocks zsh fonts-fontawesome -y
+sudo apt-get install git feh lxappearance curl rofi i3lock i3blocks zsh compton fonts-fontawesome -y
 
 # grab and install playerctl
 PLAYERCTL_DEB_PKG_LINK="https://github.com/acrisci/playerctl/releases/download/v0.6.1/playerctl-0.6.1_amd64.deb"
