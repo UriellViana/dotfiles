@@ -1,0 +1,22 @@
+command=$HOME/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+#[network]
+#label=
+#instance=enp0s3
+#interval=10
+
+#[battery]
+#label=
+#instance=0
+#interval=5
+
+[weather]
+instance=3470127
+interval=60
+
+[datetime]
+instance=%Y/%m/%d %H:%M:%S
+label=
+interval=1
