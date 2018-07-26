@@ -5,12 +5,16 @@ cd /tmp
 sudo add-apt-repository ppa:aguignard/ppa -y
 # ppa for up-to-date and 16.04-compatible rofi
 sudo add-apt-repository ppa:jasonpleau/rofi -y
+# ppa for neofetch
+sudo add-apt-repository ppa:dawidd0811/neofetch
 
 # Update existing packages from repositories
 sudo apt-get update
 
 # Get some of the initial dependencies
-sudo apt-get install git feh lxappearance curl rofi i3lock i3blocks zsh compton fonts-fontawesome -y
+sudo apt-get install git feh lxappearance curl \
+rofi i3lock i3blocks zsh compton fonts-fontawesome \
+build-essential software-properties-common neofetch -y
 
 # grab and install playerctl
 PLAYERCTL_DEB_PKG_LINK="https://github.com/acrisci/playerctl/releases/download/v0.6.1/playerctl-0.6.1_amd64.deb"
@@ -22,12 +26,19 @@ wget $PLAYERCTL_DEB_PKG_LINK
 sudo dpkg -i playerctl*.deb
 
 # Dependencies for compiling i3-gaps
-sudo apt-get install libxcb1-dev \
+sudo apt-get install -y libxcb1-dev \
 libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev \
 libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev \
 libxcb-randr0-dev libev-dev libxcb-cursor-dev \
 libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev \
-libxkbcommon-x11-dev autoconf libxcb-xrm-dev libxcb-xrm-dev -y
+libxkbcommon-x11-dev autoconf libxcb-xrm-dev libxcb-xrm-dev
+
+# dependencies for compiling i3lock-color
+sudo apt-get install -y libev-dev libxcb-composite0 \
+libxcb-composite0-dev libxcb-xinerama0 libxcb-randr0 \
+libxcb-xinerama0-dev libxcb-xkb-dev libxcb-image0-dev \
+libxcb-util-dev libxkbcommon-x11-dev libjpeg-turbo8-dev \
+libpam0g-dev
 
 # clone i3-gaps source
 rm -rf /tmp/i3-gaps
@@ -47,3 +58,11 @@ sudo make install
 
 # return to tmp
 cd /tmp
+
+# clone i3lock-color
+rm -rf /tmp/i3lock-color
+git clone https://github.com/PandorasFox/i3lock-color.git i3lock-color
+cd i3lock-color
+
+# compile & install
+autoreconf -i && ./configure && make
