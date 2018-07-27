@@ -3,6 +3,12 @@
 #
 
 # [Colors]
+set $blueYankees #232340
+set $blueCharcoal #373751
+set $aquaRackley #5291A4
+set $whitePeriwinkle #C8C8FF
+set $darkGunMetal #1D1D35
+
 set $colorDarkLiver #50514F
 set $colorDarkLiverLighter #6F706F
 set $colorDarkLiverDarker #424341
@@ -66,13 +72,13 @@ bar {
 
 	colors {
 		separator $base03
-		background $base01
+		background $blueYankees
 		statusline $base05
-                #                       border          background      text
-		focused_workspace $base0C $base0D $base00
-		active_workspace $base02 $base02 $base07
-		inactive_workspace $base01 $base01 $base03
-		urgent_workspace $base08 $base08 $base07
+#                       border          background      text
+		focused_workspace   $aquaRackley    $aquaRackley    $whitePeriwinkle
+		inactive_workspace  $darkGunMetal   $darkGunMetal   $whitePeriwinkle
+		active_workspace    $base01         $base01         $whitePeriwinkle
+		urgent_workspace    $base08         $base08         $whitePeriwinkle
 	}
 }
 
@@ -103,13 +109,13 @@ bindsym $mod+e layout toggle split
 
 # [Window Resizing]
 mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
