@@ -7,11 +7,13 @@ sudo add-apt-repository ppa:aguignard/ppa -y
 sudo add-apt-repository ppa:jasonpleau/rofi -y
 # ppa for neofetch
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
+# ppa for fish shell
+sudo apt-add-repository ppa:fish-shell/release-3 -y
 
 # Update existing packages from repositories
 sudo apt-get update
 
-PKG_LIST="fonts-awesome git feh lxappearance curl rofi i3lock i3blocks zsh compton build-essential software-properties-common neofetch stow"
+PKG_LIST="fish git feh lxappearance curl rofi i3lock i3blocks zsh compton build-essential software-properties-common neofetch stow"
 # Get some of the initial dependencies
 for pkg in $PKG_LIST; do
   sudo apt-get install -y $pkg

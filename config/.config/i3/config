@@ -90,7 +90,7 @@ bar {
 bindsym $mod+Return exec i3-sensible-terminal
 # [Window Killing and Software Launch]
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -theme rofi -show run
 
 # [Window Focus and Manipulation]
 bindsym $mod+Left focus left
@@ -170,7 +170,7 @@ assign [class="Gnome-terminal"] $ws3
 assign [class="Slack"] $ws4
 
 # [Autostart]
-exec google-chrome
+# exec google-chrome
 # exec code
 # exec gnome-terminal
 exec gnome-terminal
