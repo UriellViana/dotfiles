@@ -66,3 +66,12 @@ cd i3lock-color
 
 # compile & install
 autoreconf -i && ./configure && make
+
+# clone fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+# install fzf
+~/.fzf/install
+
+# enable it
+source ~/.zshrc
