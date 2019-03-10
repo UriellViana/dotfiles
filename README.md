@@ -2,6 +2,11 @@
 
 1. Install Manjaro
 2. Install yay
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
 3. Install Fura Code Nerd Fonts
 4. Configure font on `~/.Xresources`:
 ```
