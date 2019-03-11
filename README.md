@@ -22,12 +22,23 @@ URxvt.boldFont: xft:FuraCodeNerdFontMono:bold:pixelsize=12:antialias=true:hintin
 URxvt.italicFont: xft:FuraCodeNerdFontMono:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 URxvt.boldItalicFont: xft:FuraCodeNerdFontMono:bold:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 ```
-5. Install prezto (for zsh):
+5. Enter zsh:
 ```
-yay -S aur/prezto-git
+zsh
 ```
-6. Set zsh as the default shell:
+6. Install prezto (for zsh):
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
+7. Add the following to `.zshrc`:
+```
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+```
+8. Set zsh as the default shell:
 ```
 chsh -s $(which zsh)
 ```
-7. Reboot (Super + 0 && R);
+9. Reboot (Super + 0 && R);
