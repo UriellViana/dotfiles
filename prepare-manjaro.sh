@@ -3,6 +3,9 @@
 # Ask for sudo password beforehand
 sudo -v
 
+# update closest pacman mirrors
+sudo pacman-mirrors -f
+
 # upgrade system packages
 sudo pacman -Syu --noconfirm
 
@@ -12,7 +15,7 @@ cd /tmp
 # clone & cd & build: yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 
 # install custom font
 sudo yay -S aur/nerd-fonts-fira-code --noconfirm
