@@ -18,7 +18,7 @@ cd yay
 makepkg -si --noconfirm
 
 # install custom font
-sudo yay -S aur/nerd-fonts-fira-code --noconfirm
+sudo yay -S aur/nerd-fonts-fira-code aur/ulauncher --noconfirm
 
 # install prezto (zsh plugin manager)
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
