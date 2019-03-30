@@ -4,13 +4,17 @@
 sudo -v
 
 # update closest pacman mirrors
-sudo pacman-mirrors -f
+# sudo pacman-mirrors -f
+# this step is too slow
 
 # upgrade system packages
 sudo pacman -Syu --noconfirm
 
 # cd to /tmp to install new package manager (yay)
 cd /tmp
+
+# remove yay dir in case it already ran
+rm -rf yay
 
 # clone & cd & build: yay
 git clone https://aur.archlinux.org/yay.git
