@@ -9,44 +9,38 @@ This dotfile config is meant to be ran on top of a manjaro-i3 clean install.
 sudo pacman-mirrors -f
 ```
 
-2. Install yay:
+2. Clone this repository, cd into it, give executable permissions to the script and run it:
 ```
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://github.com/uriellviana/dotfiles
+cd dotfiles
+chmod +x ./install.sh
+./install.sh
 ```
-3. Upgrade yay packages:
+
+3. Switch to zsh shell:
 ```
-yay
+zsh
 ```
-3. Install Fura Code Nerd Fonts:
+
+4. Copy some of the prezto base dotfiles:
 ```
-yay -S aur/nerd-fonts-fira-code
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 ```
-4. Configure font on `~/.Xresources`:
+
+4.1. Configure font on `~/.Xresources`:
 ```
 URxvt.font: xft:FuraCodeNerdFontMono:regular:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 URxvt.boldFont: xft:FuraCodeNerdFontMono:bold:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 URxvt.italicFont: xft:FuraCodeNerdFontMono:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 URxvt.boldItalicFont: xft:FuraCodeNerdFontMono:bold:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
 ```
-5. Enter zsh:
-```
-zsh
-```
+
 6. Install prezto (for zsh):
 ```
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
-7. Add the following to `.zshrc`:
-```
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-```
-8. Set zsh as the default shell:
-```
-chsh -s $(which zsh)
-```
+
 9. Reboot (Super + 0 && R);
