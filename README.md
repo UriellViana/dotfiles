@@ -30,17 +30,4 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 ```
 
-4.1. Configure font on `~/.Xresources`:
-```
-URxvt.font: xft:FuraCodeNerdFontMono:regular:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
-URxvt.boldFont: xft:FuraCodeNerdFontMono:bold:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
-URxvt.italicFont: xft:FuraCodeNerdFontMono:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
-URxvt.boldItalicFont: xft:FuraCodeNerdFontMono:bold:italic:pixelsize=12:antialias=true:hinting=true, xft:DejaVu Sans:pixelsize=18
-```
-
-6. Install prezto (for zsh):
-```
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-```
-
-9. Reboot (Super + 0 && R);
+5. Reboot (Super + 0 && R);
