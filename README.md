@@ -1,6 +1,14 @@
-# Manual steps taken
+# Set up
 
-1. Install Manjaro;
+This dotfile config is meant to be ran on top of a manjaro-i3 clean install.
+
+# Steps
+
+1. Update pacman mirrors _(optional, slow)_:
+```
+sudo pacman-mirrors -f
+```
+
 2. Install yay:
 ```
 git clone https://aur.archlinux.org/yay.git
