@@ -13,7 +13,9 @@ sudo pacman-mirrors -f
 ```
 git clone https://github.com/uriellviana/dotfiles "$HOME/dotfiles"
 cd ~/dotfiles
+git checkout manjaro
 chmod +x ./install.sh
+chmod +x ./scripts/setup/*.sh
 ./install.sh
 ```
 
