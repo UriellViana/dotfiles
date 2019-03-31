@@ -11,8 +11,8 @@ sudo pacman-mirrors -f
 
 2. Clone this repository, cd into it, give executable permissions to the script and run it:
 ```
-git clone https://github.com/uriellviana/dotfiles
-cd dotfiles
+git clone https://github.com/uriellviana/dotfiles "$HOME/dotfiles"
+cd ~/dotfiles
 chmod +x ./install.sh
 ./install.sh
 ```

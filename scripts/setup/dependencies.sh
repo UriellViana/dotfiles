@@ -15,7 +15,7 @@ cd yay
 makepkg -si --noconfirm
 
 # install custom font
-sudo yay -S aur/nerd-fonts-fira-code aur/ulauncher --noconfirm
+sudo yay -S aur/nerd-fonts-fira-code community/stow --noconfirm
 
 # remove prezto dir in case it already ran
 rm -rf "${ZDOTDIR:-$HOME}/.zprezto"
