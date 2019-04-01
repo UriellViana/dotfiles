@@ -180,9 +180,9 @@ format-prefix-background = #ffb86c
 
 [module/wireless-network]
 type = internal/network
-format-connected =    <label-connected>
-label-connected = %essid% : %{T5}%{T-} %upspeed%  %{T5}%{T-} %downspeed%
-interface = wlo1
+format-connected = "%{T5}%{T-}  %{T2}<label-connected>%{T-}"
+label-connected = "%essid% : %{T5}%{T-} %upspeed%  %{T5}%{T-} %downspeed% "
+interface = enp0s3
 format-disconnected-suffix = "%{T3}%{T-}"
 format-disconnected-background = #ff5555
 format-disconnected-suffix-foreground = ${colors.background-alt}
@@ -201,9 +201,9 @@ format-connected-prefix-background = #ff5555
 
 [module/ip]
 type = internal/network
-interface = wlo1
-format-connected = %{T5}%{T-} <label-connected>
-format-disconnected = <label-disconnected>
+interface = enp0s3
+format-connected = "%{T5}%{T-} %{T2}<label-connected>%{T-} "
+format-disconnected = "%{T2}<label-disconnected>%{T-} "
 label-disconnected = Not Connected
 label-connected = %local_ip%
 format-connected-background = #bd93f9
@@ -214,6 +214,7 @@ format-connected-suffix-background = #ff5555
 format-connected-prefix = "%{T3}%{T-}"
 format-connected-prefix-foreground = #bd93f9
 format-connected-prefix-background = #bd93f9
+
 
 [module/i3]
 type = internal/i3
