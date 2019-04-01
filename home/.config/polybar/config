@@ -1,5 +1,5 @@
 [colors]
-background = #282a36
+background = ${xrdb:background:#282a36}
 background-alt = #073642
 foreground = #93a1a1
 foreground-alt = #555
@@ -143,7 +143,7 @@ format-prefix = "%{T3}%{T-}"
 format-prefix-foreground = #50fa7b
 format-prefix-background = #44475a
 format-suffix = "%{T3}%{T-}"
-format-suffix-foreground = #282a36
+format-suffix-foreground = ${colors.background}
 format-suffix-background = #50fa7b
 
 [module/pulseaudio]
@@ -194,7 +194,7 @@ format-connected-suffix = "%{T3}%{T-}"
 format-connected-background = #ff5555
 format-connected-foreground = #212121
 format-connected-suffix-foreground = #ff5555
-format-connected-suffix-background = 282a36
+format-connected-suffix-background = ${colors.background}
 format-connected-prefix = "%{T3}%{T-}"
 format-connected-prefix-foreground = #ff5555
 format-connected-prefix-background = #ff5555
