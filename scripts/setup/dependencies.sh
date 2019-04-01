@@ -14,8 +14,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 
-# install custom font
-yay -S aur/nerd-fonts-fira-code community/stow --noconfirm
+# install custom fonts and stow
+yay -S aur/nerd-fonts-fira-code community/ttf-font-awesome aur/ttf-font-awesome-4 ttf-google-sans community/stow --noconfirm
 
 # remove prezto dir in case it already ran
 rm -rf "${ZDOTDIR:-$HOME}/.zprezto"
