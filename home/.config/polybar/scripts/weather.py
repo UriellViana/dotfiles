@@ -48,7 +48,7 @@ def main():
       desc_temp_label = "%{T2}" + desc + ", " + '{}'.format(temp) + "°C%{T-}"
       return ' {} {} '.format(icon_label, desc_temp_label)
   except:
-      return ''
+      return '  '
 
 
 if __name__ == "__main__":

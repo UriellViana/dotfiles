@@ -7,38 +7,6 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/bottom]
-bottom = true
-width = 100%
-height = 20
-fixed-center = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = FuraCodeNerdFontMono:pixelsize=8;2
-font-1 = FuraCodeNerdFontMono:pixelsize=10;2
-font-2 = UbuntuMono Nerd Font:size=16;4
-font-3 = Font Awesome 5 Free:pixelsize=12;3
-font-4 = Font Awesome 5 Free Solid:pixelsize=12;3
-font-5 = Font Awesome 5 Brands:pixelsize=12;3
-font-6 = FontAwesome:pixelsize=12;4
-
-modules-left = ip
-modules-center = date
-modules-right = weather shutdown-text
-
-tray-position = none
-tray-padding = 2
-
-module-margin = 0
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 [bar/top]
 ; bottom = true
 width = 100%
@@ -53,7 +21,7 @@ module-margin-right = 0
 
 font-0 = FuraCodeNerdFontMono:pixelsize=8;2
 font-1 = FuraCodeNerdFontMono:pixelsize=10;3
-font-2 = UbuntuMono Nerd Font:size=16;4
+font-2 = FuraCodeNerdFontMono:pixelsize=14;3
 font-3 = Font Awesome 5 Free:pixelsize=12;3
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;3
 font-5 = Font Awesome 5 Brands:pixelsize=12;3
@@ -65,6 +33,38 @@ modules-right = cpu memory
 
 tray-position = right
 tray-padding =
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bottom]
+bottom = true
+width = 100%
+height = 20
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = FuraCodeNerdFontMono:pixelsize=8;2
+font-1 = FuraCodeNerdFontMono:pixelsize=10;2
+font-2 = FuraCodeNerdFontMono:pixelsize=14;3
+font-3 = Font Awesome 5 Free:pixelsize=12;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;3
+font-5 = Font Awesome 5 Brands:pixelsize=12;3
+font-6 = FontAwesome:pixelsize=12;4
+
+modules-left = ip
+modules-center = date
+modules-right = weather shutdown-text
+
+tray-position = none
+tray-padding = 2
+
+module-margin = 0
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -218,7 +218,7 @@ format-connected-prefix-background = #bd93f9
 
 [module/i3]
 type = internal/i3
-format = "%{T2}<label-state> <label-mode>%{T-} %{T3}%{T-}"
+format = "%{T2}<label-state> <label-mode>%{T-}"
 index-sort = true
 enable-scroll = false
 
