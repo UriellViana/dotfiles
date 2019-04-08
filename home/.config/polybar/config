@@ -9,6 +9,7 @@ alert = #bd2c40
 
 [bar/top]
 ; bottom = true
+monitor = ${env:MONITOR:}
 width = 100%
 height = 20
 fixed-center = true
@@ -38,6 +39,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/bottom]
+monitor = ${env:MONITOR:}
 bottom = true
 width = 100%
 height = 20
@@ -221,6 +223,7 @@ type = internal/i3
 format = "%{T2}<label-state> <label-mode>%{T-}"
 index-sort = true
 enable-scroll = false
+pin-workspaces = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
