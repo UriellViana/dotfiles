@@ -1,2 +1,4 @@
 themes/chrome.pem
 themes/chrome/Cached Theme.pak
+home/.config/ulauncher/*
+!home/.config/ulauncher/settings.json
