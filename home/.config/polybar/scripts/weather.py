@@ -10,7 +10,7 @@ import os
 
 
 def main():
-  api_key = "REDACTED"
+  api_key = os.getenv('DARKSKY_TOKEN')
   base_url = "https://api.darksky.net"
   endpoint = "/forecast"
   coordinates = ["-19.9351086", "-43.9382402"]

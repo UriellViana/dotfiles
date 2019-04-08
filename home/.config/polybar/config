@@ -59,7 +59,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;3
 font-5 = Font Awesome 5 Brands:pixelsize=12;3
 font-6 = FontAwesome:pixelsize=12;4
 
-modules-left = ip
+modules-left = ip wireless-network
 modules-center = date
 modules-right = weather shutdown-text
 
@@ -183,8 +183,8 @@ format-prefix-background = #ffb86c
 [module/wireless-network]
 type = internal/network
 format-connected = "%{T5}%{T-}  %{T2}<label-connected>%{T-}"
-label-connected = "%essid% : %{T5}%{T-} %upspeed%  %{T5}%{T-} %downspeed% "
-interface = enp0s3
+label-connected = "%essid%: %{T5}%{T-} %upspeed%  %{T5}%{T-} %downspeed% "
+interface = wlp1s0
 format-disconnected-suffix = "%{T3}%{T-}"
 format-disconnected-background = #ff5555
 format-disconnected-suffix-foreground = ${colors.background-alt}
@@ -203,7 +203,7 @@ format-connected-prefix-background = #ff5555
 
 [module/ip]
 type = internal/network
-interface = enp0s3
+interface = wlp1s0
 format-connected = "%{T5}%{T-} %{T2}<label-connected>%{T-} "
 format-disconnected = "%{T2}<label-disconnected>%{T-} "
 label-disconnected = Not Connected
