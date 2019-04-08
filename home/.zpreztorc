@@ -17,7 +17,8 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-  'utility'
+  'utility' \
+  'node'
 
 #
 # Autosuggestions
